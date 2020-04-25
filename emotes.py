@@ -1,6 +1,9 @@
 from random import randrange
 import requests
 import json
+import os
+
+Smile_url = os.getenv('GIPHY_API_SMILE')
 
 def kick():
     
@@ -12,6 +15,6 @@ def kick():
     return kick1
 
 def smile():
-    page=requests.get('http://api.giphy.com/v1/gifs/random?api_key=BMBukHVLayjrWgYWrc38oFyz2DiU9wg1&tag=smile')
+    page=requests.get(Smile_url)
     data=page.json()
     return(data["data"]["url"])

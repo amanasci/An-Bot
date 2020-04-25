@@ -25,7 +25,7 @@ def plot(y):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.plot(x,z)
-    plt.savefig("An bot\\plot.png")
+    plt.savefig("An\\plot.png") 
     plt.close()
 
 def plot3D(a):
@@ -41,5 +41,5 @@ def plot3D(a):
                 cmap='viridis', edgecolor='none')
     plt.xlabel('b')
     plt.ylabel('c')
-    plt.savefig("An bot\\plot3D.png")
+    plt.savefig("An\\plot3D.png")
     plt.close()
