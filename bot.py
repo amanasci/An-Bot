@@ -27,17 +27,6 @@ async def on_ready():
     game = discord.Game(name="with Graphs")
     await client.change_presence(status=discord.Status.idle, activity=game)
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if str(client.user.id) in message.content:
-        await message.channel.send("Why you summoned me?")
-    if '626276117266956310' in message.content: 
-             await message.channel.send(":expressionless:")
-    if '632253939496255508' in message.content: 
-             await message.channel.send(":innocent:")
-    await client.process_commands(message)
 
 @client.command()
 async def kick(ctx,a:discord.Member):
